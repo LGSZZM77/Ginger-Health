@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GingerHealth</title>
+  <link rel="stylesheet" href="./style.css">
+  <link rel="stylesheet" href="./fonts/all.min.css">
+  <link rel="icon" href="./favicon.ico" type="image/x-icon">
+  <!-- alert말고는 js사용 no -->
+</head>
+
+<body>
+  <!-- 헤더 -->
+  <header>
+    <!-- 검색 -->
+    <input type="checkbox" name="" id="hd_fade_in_out">
+    <label for="hd_fade_in_out" class="hd_fade_in_out">
+      <i class="fa-solid fa-angle-up" title="닫기"></i>
+      <i class="fa-solid fa-angle-down" title="열기"></i>
+    </label>
+    <!-- 로그인 -->
+    <input type="checkbox" name="user" id="user">
+    <!-- 헤더영역 -->
+    <div class="header_area">
+      <ul class="hd_left hd_link">
+        <li><a href="./introduction.html">회사소개<i class="fa-solid fa-building"></i></a></li>
+        <li><a href="./#product_cards-scroll">제품구매<i class="fa-solid fa-cart-shopping"></i></a></li>
+        <li><a href="./community.html">커뮤니티<i class="fa-solid fa-comments"></i></a></li>
+      </ul>
+      <div class="hd_logo logo">
+        <b><a href="./index.html" class="enfont" title="로고">Ginger Health</a></b>
+      </div>
+      <ul class="hd_right hd_link">
+        <li><label for="user"><a><i class="fa-solid fa-user"></i>로그인</a></label></li>
+        <li><a href="./wishlist.html"><i class="fa-solid fa-heart"></i>위시리스트</a></li>
+        <li><a href="./cart.html"><i class="fa-solid fa-basket-shopping"></i>장바구니</a></li>
+      </ul>
+    </div>
+    <!-- 로그인모달 -->
+    <div id="modal">
+      <input type="checkbox" name="user" id="user">
+      <div class="modal_box">
+        <div class="modal_header">
+          <h1>회원 로그인</h1>
+          <label for="user">&times;</label>
+        </div>
+        <form class="login-form">
+          <div class="input-container">
+            <i class="fa-solid fa-user"></i>
+            <input class="login-input" type="text" placeholder="아이디를 입력하세요" required>
+          </div>
+          <div class="input-container">
+            <i class="fa-solid fa-lock"></i>
+            <input class="login-input" type="password" placeholder="비밀번호를 입력하세요" required>
+          </div>
+          <div class="auto-login">
+            <input type="checkbox" name="" id="">
+            <span>자동로그인</span>
+          </div>
+          <input class="login-btn" type="submit" value="로그인">
+          <div class="login-under">
+            <span>아이디 찾기</span>&nbsp; | &nbsp;
+            <span>비밀번호 찾기</span>&nbsp; | &nbsp;
+            <span><a href="./join.html">회원가입</a></span>
+          </div>
+        </form>
+      </div>
+    </div>
+    <!-- 검색 -->
+    <div class="under_header">
+      <div class="ud_hd_link">
+        <div class="link-item">
+          <i class="fa-solid fa-globe"></i>
+          <i class="fa-solid fa-caret-down"></i>
+          KR
+        </div>
+        <div class="link-item">
+          <i class="fa-solid fa-truck"></i>
+          배송 정보
+        </div>
+      </div>
+      <div class="search_area">
+        <select>
+          <option>전체</option>
+          <option>제품</option>
+          <option>회사</option>
+        </select>
+        <input type="text" placeholder="검색어를 입력해주세요." id="search-input">
+        <input type="submit" id="search_btn">
+        <label for="search_btn" title="검색">
+          <i class="fa-solid fa-magnifying-glass"></i>
+        </label>
+      </div>
+      <div class="ud_hd_link">
+        <div class="link-item">
+          <a href="https://www.instagram.com/" title="인스타그램" target="_blank" rel="noreferrer noopener">
+            <i class="fa-brands fa-instagram"></i></a>
+        </div>
+        <div class="link-item">
+          <a href="https://www.facebook.com/" title="페이스북" target="_blank" rel="noreferrer noopener">
+            <i class="fa-brands fa-facebook"></i></a>
+          </a>
+        </div>
+        <div class="link-item">
+          <a href="https://www.youtube.com/" title="유튜브" target="_blank" rel="noreferrer noopener">
+            <i class="fa-brands fa-youtube"></i></a>
+        </div>
+        <div class="link-item">
+          <a href="./index.html" title="새탭" target="_blank" rel="noreferrer noopener">
+            <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- 1680px로 감싸기 -->
+  <div id="wrap">
+    <div class="visual">
+      <!-- 캐러셀 -->
+      <div class="slider">
+        <input type="checkbox" id="arraw_btn" checked>
+        <div class="slider_arraw">
+          <label for="arraw_btn"><i class="fa-solid fa-chevron-left"></i></label>
+          <label for="arraw_btn"><i class="fa-solid fa-chevron-right"></i></label>
+        </div>
+        <div class="slider_item">
+          <div class="slide_text">
+            <h2 class="typing_text">생강으로 여는 새로운 비즈니스</h2>
+            <p class="slide_text1">자연에서 찾은 건강의 해답</p>
+            <p class="slide_text2">발효의 신비, 시간이 빚어낸 변화</p>
+          </div>
+          <img class="img1" src="./images/slider1.jpg" alt="생강이미지">
+          <img class="img2" src="./images/slider2.webp" alt="오렌지이미지">
+        </div>
+        <div class="slider_num">
+          <label for="arraw_btn" class="slider_num1"></label>
+          <label for="arraw_btn" class="slider_num2"></label>
+        </div>
+      </div>
+    </div>
+
+    <!-- 소개영역 -->
+    <section class="intro">
+      <div class="title">
+        <h1><span class="cg">생강</span>과 <span class="co">진피(귤피)</span>에 대해 잘 알고<br>계신가요?</h1>
+      </div>
+      <div class="intro_text">
+        <p><span class="pen1">생강</span>은 전통적으로 <span class="pen1">항염, 소화 촉진</span> 등의 효능을 지닌 식재료로, <span class="pen1">발효 과정을 통해 이러한 기능을 극대화</span>가 가능해요.</p>
+        <p><span class="pen2">진피(귤껍질)</span>는 전통적으로 <span class="pen2">소화 촉진, 항염</span>, 그리고 <span class="pen2">혈액 순환 개선</span>에 도움을 주며, <span class="pen2">면역력 강화 효과</span>가 있는 것으로 인정받고 있어요.</p>
+      </div>
+      <!-- 버튼클릭시 새탭 -->
+      <div class="intro_btns">
+        <a href="https://www.nongsaro.go.kr/portal/ps/psr/psrb/monthFdmtDtl.ps?menuId=PS03924&cntntsNo=207958&code=&thisMonth=12"
+          target="_blank" rel="noreferrer noopener"><button class="btn1">생강에 대해 알아보기
+            <img src="./images/ginger_icon.png" alt="생강아이콘">
+          </button></a>
+        <a href="https://www.nongsaro.go.kr/portal/ps/psz/psza/contentSub.ps?menuId=PS03797&sSeCode=374019&cntntsNo=102075&totalSearchYn=Y"
+          target="_blank" rel="noreferrer noopener"><button class="btn2">진피에 대해 알아보기
+            <img src="./images/peel_icon.png" alt="진피아이콘">
+          </button></a>
+      </div>
+    </section>
+
+    <!-- 제품영역 -->
+    <section class="product">
+      <div class="title">
+        <h1><span class="cm">진저 헬스</span>의<br>제품을 소개합니다!</h1>
+      </div>
+      <div id="scroll-snap">
+        <!-- 스크롤스냅1 -->
+        <div class="snap-item">
+          <div class="snap-img">
+            <img src="./images/product/product1.png" alt="제품1">
+          </div>
+          <div class="snap-text">
+            <h1>진피 발효 생강차</h1>건강 기능성 음료로, 진피와 생강의 복합적인 효능을 발효 과정을 통해 극대화한 제품. 면역력 강화, 소화 촉진, 항염 효과가 주요 특징
+          </div>
+          <div class="snap-absol">
+            <p><b>아래로 스크롤하세요</b></p>
+            <i class="fa-solid fa-angle-down"></i>
+          </div>
+        </div>
+        <!-- 스크롤스냅2 -->
+        <div class="snap-item">
+          <div class="snap-img">
+            <img src="./images/product/product2.png" alt="제품2">
+          </div>
+          <div class="snap-text">
+            <h1>발효 생강 양갱</h1>발효 생강을 사용하여 만든 전통 디저트로, 쫄깃한 식감과 고유의 건강 성분을 강조한 양갱. 간식으로 간편하게 섭취 가능
+          </div>
+          <div class="snap-absol"><p>2 / 7</p></div>
+        </div>
+        <!-- 스크롤스냅3 -->
+        <div class="snap-item">
+          <div class="snap-img">
+            <img src="./images/product/product3.png" alt="제품3">
+          </div>
+          <div class="snap-text">
+            <h1>발효 생강 초콜릿</h1>발효 생강의 항염 및 소화 촉진 성분을 초콜릿과 결합하여 건강하면서도 달콤한 디저트를 제공. 건강 지향 소비자들을 위한 제품
+          </div>
+          <div class="snap-absol"><p>3 / 7</p></div>
+        </div>
+        <!-- 스크롤스냅4 -->
+        <div class="snap-item">
+          <div class="snap-img">
+            <img src="./images/product/product4.png" alt="제품4">
+          </div>
+          <div class="snap-text">
+            <h1>발효 생강 오란다</h1>기존의 오란다 제품은 설탕 시럽으로 제작하였지만 이를 발효 생강청으로 대신하여 설탕에 대한 부담감을 덜고, 생강 고유의 은은한 향을 입힌 제품.
+          </div>
+          <div class="snap-absol"><p>4 / 7</p></div>
+        </div>
+        <!-- 스크롤스냅5 -->
+        <div class="snap-item">
+          <div class="snap-img">
+            <img src="./images/product/product5.png" alt="제품5">
+          </div>
+          <div class="snap-text">
+            <h1>진피 생강 카카오 영양바</h1>발효 생강의 효능을 초콜릿과 결합하여 건강하면서도 달콤한 디저트 제공.
+          </div>
+          <div class="snap-absol"><p>5 / 7</p></div>
+        </div>
+        <!-- 스크롤스냅6 -->
+        <div class="snap-item">
+          <div class="snap-img">
+            <img src="./images/product/product6.png" alt="제품6">
+          </div>
+          <div class="snap-text">
+            <h1>진피 생강 요플레</h1>요플레 제작 과정 중 진피 발효 생강액을 넣어 맛과 향을 잡은 제품으로 바삭한 식감의 진피칩을 곁들여 먹는 제품
+          </div>
+          <div class="snap-absol"><p>6 / 7</p></div>
+        </div>
+        <!-- 스크롤스냅7 -->
+        <div class="snap-item">
+          <div class="snap-img">
+            <img src="./images/product/product7.png" alt="제품7">
+          </div>
+          <div class="snap-text">
+            <h1>진피 발효 생강 스틱</h1>발효 생강을 활용하여 만든 전통 디저트. 쫄깃한 식감과 생강의 독특한 건강 성분을 담아, 간편하게 즐길 수 있는 스낵으로 완벽함. 달콤함과 매콤함이 조화를 이루며, 언제 어디서나 건강한 간식으로 손쉽게 섭취 가능."
+          </div>
+          <div class="snap-absol"><p>7 / 7</p></div>
+        </div>
+      </div>
+
+      <!-- 제품구매 클릭시 이동 -->
+      <div id="product_cards-scroll"></div>
+      <h2 class="product-buy">제품 구매하기</h2>
+      <div class="product_cards-contents">
+        <input type="checkbox" name="basket" id="basket1">
+        <input type="checkbox" name="basket" id="basket2">
+        <input type="checkbox" name="basket" id="basket3">
+        <input type="checkbox" name="basket" id="basket4">
+        <input type="checkbox" name="basket" id="basket5">
+        <input type="checkbox" name="basket" id="basket6">
+        <input type="checkbox" name="basket" id="basket7">
+        <!-- 1번상품 -->
+        <div class="product_cards">
+          <div class="best">
+            <b>BEST</b>
+          </div>
+          <div class="card-item">
+            <div class="card_top">
+              <img src="./images/product/product1.png" alt="제품1">
+            </div>
+            <div class="card_mid">
+              <p>건강 기능성 음료</p>
+              <p>진피 발효 생강차 (10개입)</p>
+              <p>10,000원</p>
+            </div>
+          </div>
+          <div class="card_bottom">
+            <input type="checkbox" id="heart_check1">
+            <label class="card_bottom-item heart-label" for="heart_check1">
+              <i class="fa-regular fa-heart" id="r-heart"></i>
+              <i class="fa-solid fa-heart" id="s-heart"></i>
+              찜하기
+            </label>
+            <label for="basket1" class="card_bottom-item">
+              <div class="shopping-btn">
+                <i class="fa-solid fa-basket-shopping"></i>
+                장바구니
+              </div>
+            </label>
+          </div>
+        </div>
+        <!-- 2번상품 -->
+        <div class="product_cards">
+          <div class="best">
+            <b>BEST</b>
+          </div>
+          <div class="card-item">
+            <div class="card_top">
+              <img src="./images/product/product2.png" alt="제품2">
+            </div>
+            <div class="card_mid">
+              <p>간식으로 먹기좋은 건강식품</p>
+              <p>발효 생강 양갱 (4개입)</p>
+              <p>3,000원</p>
+            </div>
+          </div>
+          <div class="card_bottom">
+            <input type="checkbox" id="heart_check2">
+            <label class="card_bottom-item heart-label" for="heart_check2">
+              <i class="fa-regular fa-heart" id="r-heart"></i>
+              <i class="fa-solid fa-heart" id="s-heart"></i>
+              찜하기
+            </label>
+            <label for="basket2" class="card_bottom-item">
+              <div class="shopping-btn">
+                <i class="fa-solid fa-basket-shopping"></i>
+                장바구니
+              </div>
+            </label>
+          </div>
+        </div>
+        <!-- 3번상품 -->
+        <div class="product_cards">
+          <div class="best">
+            <b>BEST</b>
+          </div>
+          <div class="card-item">
+            <div class="card_top">
+              <img src="./images/product/product3.png" alt="제품3">
+            </div>
+            <div class="card_mid">
+              <p>건강하면서도 달콤한 디저트</p>
+              <p>생강 카카오 젤리 (10개입)</p>
+              <p>10,000원</p>
+            </div>
+          </div>
+          <div class="card_bottom">
+            <input type="checkbox" id="heart_check3">
+            <label class="card_bottom-item heart-label" for="heart_check3">
+              <i class="fa-regular fa-heart" id="r-heart"></i>
+              <i class="fa-solid fa-heart" id="s-heart"></i>
+              찜하기
+            </label>
+            <label for="basket3" class="card_bottom-item">
+              <div class="shopping-btn">
+                <i class="fa-solid fa-basket-shopping"></i>
+                장바구니
+              </div>
+            </label>
+          </div>
+        </div>
+        <!-- 4번상품 -->
+        <div class="product_cards">
+          <div class="best">
+            <b>BEST</b>
+          </div>
+          <div class="card-item">
+            <div class="card_top">
+              <img src="./images/product/product4.png" alt="제품4">
+            </div>
+            <div class="card_mid">
+              <p>설탕 無 부담 없는 간식</p>
+              <p>발효 생강 오란다 (5개입)</p>
+              <p>15,000원</p>
+            </div>
+          </div>
+          <div class="card_bottom">
+            <input type="checkbox" id="heart_check4">
+            <label class="card_bottom-item heart-label" for="heart_check4">
+              <i class="fa-regular fa-heart" id="r-heart"></i>
+              <i class="fa-solid fa-heart" id="s-heart"></i>
+              찜하기
+            </label>
+            <label for="basket4" class="card_bottom-item">
+              <div class="shopping-btn">
+                <i class="fa-solid fa-basket-shopping"></i>
+                장바구니
+              </div>
+            </label>
+          </div>
+        </div>
+        <!-- 5번상품 -->
+        <div class="product_cards">
+          <div class="best">
+            <b>BEST</b>
+          </div>
+          <div class="card-item">
+            <div class="card_top">
+              <img src="./images/product/product5.png" alt="제품5">
+            </div>
+            <div class="card_mid">
+              <p>고단백 에너지 보충</p>
+              <p>진피 생강 카카오 영양바 (2개입)</p>
+              <p>3,000원</p>
+            </div>
+          </div>
+          <div class="card_bottom">
+            <input type="checkbox" id="heart_check5">
+            <label class="card_bottom-item heart-label" for="heart_check5">
+              <i class="fa-regular fa-heart" id="r-heart"></i>
+              <i class="fa-solid fa-heart" id="s-heart"></i>
+              찜하기
+            </label>
+            <label for="basket5" class="card_bottom-item">
+              <div class="shopping-btn">
+                <i class="fa-solid fa-basket-shopping"></i>
+                장바구니
+              </div>
+            </label>
+          </div>
+        </div>
+        <!-- 6번상품 -->
+        <div class="product_cards">
+          <div class="best">
+            <b>BEST</b>
+          </div>
+          <div class="card-item">
+            <div class="card_top">
+              <img src="./images/product/product6.png" alt="제품6">
+            </div>
+            <div class="card_mid">
+              <p>간편한 아침식사</p>
+              <p>진피 생강 요플레</p>
+              <p>5,000원</p>
+            </div>
+          </div>
+          <div class="card_bottom">
+            <input type="checkbox" id="heart_check6">
+            <label class="card_bottom-item heart-label" for="heart_check6">
+              <i class="fa-regular fa-heart" id="r-heart"></i>
+              <i class="fa-solid fa-heart" id="s-heart"></i>
+              찜하기
+            </label>
+            <label for="basket6" class="card_bottom-item">
+              <div class="shopping-btn">
+                <i class="fa-solid fa-basket-shopping"></i>
+                장바구니
+              </div>
+            </label>
+          </div>
+        </div>
+        <!-- 7번상품 -->
+        <div class="product_cards">
+          <div class="best">
+            <b>BEST</b>
+          </div>
+          <div class="card-item">
+            <div class="card_top">
+              <img src="./images/product/product7.png" alt="제품7">
+            </div>
+            <div class="card_mid">
+              <p>달콤한 맛 최고의 간식</p>
+              <p>진피 발효 생강 스틱 (10개입)</p>
+              <p>11,000원</p>
+            </div>
+          </div>
+          <div class="card_bottom">
+            <input type="checkbox" id="heart_check7">
+            <label class="card_bottom-item heart-label" for="heart_check7">
+              <i class="fa-regular fa-heart" id="r-heart"></i>
+              <i class="fa-solid fa-heart" id="s-heart"></i>
+              찜하기
+            </label>
+            <label for="basket7" class="card_bottom-item">
+              <div class="shopping-btn">
+                <i class="fa-solid fa-basket-shopping"></i>
+                장바구니
+              </div>
+            </label>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- 푸터 -->
+  <footer>
+    <div class="tt_top">
+      <div class="ft_item">
+        <div class="tf_text">비전</div>
+        <ul>
+          <li>농생명으로 세상을 구하다.</li>
+          <b>더 알아보기</b>
+        </ul>
+      </div>
+      <div class="ft_item">
+        <div class="tf_text">소셜</div>
+        <ul>
+          <li>
+            <a href="https://www.instagram.com/seungjin2025/" target="_blank" rel="noreferrer noopener">
+              instagram
+              <i class="fa-solid fa-arrow-up-right-from-square"></i>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.facebook.com/" target="_blank" rel="noreferrer noopener">
+              facebook
+              <i class="fa-solid fa-arrow-up-right-from-square"></i>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.youtube.com/" target="_blank" rel="noreferrer noopener">
+              youtube
+              <i class="fa-solid fa-arrow-up-right-from-square"></i>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="ft_item">
+        <div class="tf_text">기업 정보</div>
+        <ul>
+          <li>전화: 010-6322-1559</li>
+          <li>대표자: 양승진</li>
+          <li>대표 이메일: tmdwls63221559@gmail.com</li>
+          <li><b>사업자정보확인</b></li>
+        </ul>
+      </div>
+    </div>
+    <div class="tf_bottom">
+      <div class="enfont">© Ginger Health</div>
+      <div class="tf_bottom2">
+        <b>개인정보처리방침</b>
+        <b>이용약관</b>
+        <b>사이트맵</b>
+        <b>브랜드 협력사 및 파트너</b>
+      </div>
+      <div><a href="#" class="top-btn" title="위로 이동">top</a></div>
+    </div>
+  </footer>
+
+</body>
+
+</html>

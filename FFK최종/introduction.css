@@ -1,0 +1,120 @@
+.sub-wrap {
+  width: 1280px;
+  display: flex;
+  position: relative;
+  transform: translateX(-50%);
+  left: 50%;
+}
+
+.company-side {
+  display: flex;
+  flex-direction: column;
+}
+.company-title {
+  margin-bottom: 15px;
+  padding-bottom: 15px;
+  border-bottom: 2px solid #000;
+  font-size: 24px;
+  padding-left: 15px;
+}
+.company-title > b {
+  font-size: 20px;
+}
+.company-btn {
+  cursor: pointer;
+  border-bottom: 1px solid #dcdcdc;
+  height: 50px;
+  width: 200px;
+  padding-left: 15px;
+  display: flex;
+  align-items: center;
+}
+
+input[name="company-control"] {
+  display: none;
+}
+
+#company1:checked ~ .sub-wrap .company-side label[for="company1"],
+#company2:checked ~ .sub-wrap .company-side label[for="company2"],
+#company3:checked ~ .sub-wrap .company-side label[for="company3"] {
+  background-color: #556B2F;
+  color: white;
+}
+
+.company-contents {
+  margin: auto;
+}
+
+#company-title1,#company-title2,#company-title3,
+#company-box1,#company-box2,#company-box3 {
+  display: none;
+}
+
+#company1:checked ~ .sub-wrap .company-contents .company-title #company-title1,
+#company2:checked ~ .sub-wrap .company-contents .company-title #company-title2,
+#company3:checked ~ .sub-wrap .company-contents .company-title #company-title3,
+#company1:checked ~ .sub-wrap .company-contents .company-box #company-box1,
+#company2:checked ~ .sub-wrap .company-contents .company-box #company-box2,
+#company3:checked ~ .sub-wrap .company-contents .company-box #company-box3 {
+  display: block;
+}
+
+#company-box1 {
+  font-size: 26px;
+  line-height: 40px;
+  padding: 30px;
+}
+
+#company-box2{
+  position: relative;
+}
+#company-box2 > .ceo {
+  position: absolute;
+  height: 700px;
+  right: 0;
+  top: 0;
+  overflow: hidden;
+}
+
+.ceo > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: relative;
+  animation: ceoMove 2.35s ease-in-out infinite;
+  top: 50px; 
+}
+
+@keyframes ceoMove {
+  0%{top: 50px;}
+  50%{top: 0px;}
+  100%{top: 50px;}
+}
+
+.company-box {
+  width: 700px;
+  height: 700px;
+  background-color: #eee;
+}
+.company-box > div {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+.map {
+  width:700px;
+  height: 700px;
+}
+.map img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.box2-text {
+  padding-left: 30px;
+  padding-top: 30px;
+  width: 60%;
+  font-size: 26px;
+  line-height: 40px;
+}

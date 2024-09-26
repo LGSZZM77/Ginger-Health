@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="./join.css">
+  <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+  <!-- 회원가입 페이지 -->
+  <div class="join">
+    <form class="join-form" action="./index.html">
+      <div class="join-title">
+        <h1>진저헬스 회원가입</h1>
+      </div>
+      <div class="join-form-container">
+        <div class="input-title">아이디</div>
+        <input type="text" placeholder="아이디를 입력해주세요" required>
+        <div class="input-title">비밀번호</div>
+        <input type="password" placeholder="비밀번호를 입력해주세요" required>
+        <div class="input-title">추천코드</div>
+        <input type="text" placeholder="[선택사항] 추천코드를 입력해주세요">
+        <div class="input-title input-title2">이용약관 동의</div>
+        <div class="consent">
+          <div class="consentbox">
+            <span>
+              <input type="checkbox">
+              <p class="essential">[필수]</p>
+              <p class="consent-text">서비스 이용약관</p>
+            </span>
+            <span class="look">[보기]</span>
+          </div>
+          <div class="consentbox">
+            <span>
+              <input type="checkbox">
+              <p class="essential">[필수]</p>
+              <p class="consent-text">전자금융거래 이용약관 </p>
+            </span>
+            <span class="look">[보기]</span>
+          </div>
+          <div class="consentbox">
+            <span>
+              <input type="checkbox">
+              <p class="essential">[필수]</p>
+              <p class="consent-text">개인정보 처리방침 </p>
+            </span>
+            <span class="look">[보기]</span>
+          </div>
+        </div>
+      </div>
+      <input type="submit" value="회원가입하기">
+    </form>
+  </div>
+</body>
+
+</html>

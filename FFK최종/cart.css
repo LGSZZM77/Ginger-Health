@@ -1,0 +1,138 @@
+.cart_area {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 25px 0;
+  background-color: #eee;
+}
+.cart_box {
+  width: 1280px;
+  background-color: #fff;
+  border-radius: 22px;
+}
+.cart_box1{
+  height: 50px;
+  border-bottom: 1px solid #000;
+}
+.cart_box2 {
+  height: 150px;
+}
+.cart_box3 {
+  height: 100px;
+  padding: 0 250px;
+  border-top: 2px solid #000;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.box-flex {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+.box-flex > p {
+  font-size: 14px;
+  line-height: 22px;
+}
+.box-flex > p > b {
+  font-size: 16px;
+}
+.opResult {
+  font-size: 40px;
+}
+.price {
+  font-weight: bold;
+  font-size: 20px;
+}
+.cart_btn {
+  width: 250px;
+  height: 60px;
+  border-radius: 11px;
+  border: 0px;
+  cursor: pointer;
+  background-color: #556B2F;
+  color: white;
+  font-size: 24px;
+}
+
+.cart_btn > *{
+  display: none;
+}
+
+.cart_btn > label {
+  height: 100%;
+  line-height: 60px;
+  cursor: pointer;
+}
+
+.cart_btn > #order:checked ~ .order1,
+.cart_btn > #order:not(:checked) ~ .order2 {
+  display: block;
+}
+
+.cart_box2 {
+  display: flex;
+}
+.cart_box2 > .cart_item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.cart_box2 > .cart_item > input {
+  width: 20px;
+  height: 20px;
+}
+.special-item1 {
+  display: flex;
+  gap: 15px;
+  margin-right: 70px;
+  padding: 10px 0px 10px 30px;
+}
+.cart-circle {
+  width: 130px;
+  height: 130px;
+  border-radius: 100px;
+  overflow: hidden;
+}
+.cart-circle > img {
+  width: 100%;
+  height: 100%;
+}
+
+.special-item2 {
+  font-size: 30px;
+  font-weight: bold;
+  width: 500px;
+}
+.special-item3, .special-item4,.special-item5{
+  width: 150px;
+  font-size: 24px;
+  font-weight: lighter;
+}
+
+.special-item2, .special-item3, .special-item4 {
+  border-right: 1px solid #dcdcdc;
+}
+.special-item5 {
+  width: 200px;
+}
+
+.cart_box1 {
+  padding-left: 265px;
+  font-size: 20px;
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+  align-items: center;
+
+}
+.special-box1 {
+  width: 500px;
+}
+.special-box2,.special-box3 {
+  width: 150px;
+}
+.special-box4 {
+  width: 200px;
+}

@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="./subStyle.css">
+  <link rel="stylesheet" href="/cart.css">
+  <link rel="stylesheet" href="./style.css">
+  <link rel="stylesheet" href="./fonts/all.min.css">
+  <link rel="icon" href="./favicon.ico" type="image/x-icon">
+</head>
+
+<body>
+  <header>
+    <input type="checkbox" name="" id="hd_fade_in_out">
+    <label for="hd_fade_in_out" class="hd_fade_in_out">
+      <i class="fa-solid fa-angle-up" title="닫기"></i>
+      <i class="fa-solid fa-angle-down" title="열기"></i>
+    </label>
+    <input type="checkbox" name="user" id="user">
+    <div class="header_area">
+      <ul class="hd_left hd_link">
+        <li><a href="./introduction.html">회사소개<i class="fa-solid fa-building"></i></a></li>
+        <li><a href="./#product_cards-scroll">제품구매<i class="fa-solid fa-cart-shopping"></i></a></li>
+        <li><a href="./community.html">커뮤니티<i class="fa-solid fa-comments"></i></a></li>
+      </ul>
+      <div class="hd_logo logo">
+        <b><a href="./index.html" class="cl enfont" title="로고">Ginger Health</a></b>
+      </div>
+      <ul class="hd_right hd_link">
+        <li><label for="user"><a><i class="fa-solid fa-user"></i>로그인</a></a></label></li>
+        <li><a href="./wishlist.html"><i class="fa-solid fa-heart"></i>위시리스트</a></li>
+        <li><a href="./cart.html" class="cg"><i class="fa-solid fa-basket-shopping"></i>장바구니</a></li>
+      </ul>
+    </div>
+    <div id="modal">
+      <input type="checkbox" name="user" id="user">
+      <div class="modal_box">
+        <div class="modal_header">
+          <h1>회원 로그인</h1>
+          <label for="user">&times;</label>
+        </div>
+        <form class="login-form">
+          <div class="input-container">
+            <i class="fa-solid fa-user"></i>
+            <input class="login-input" type="text" placeholder="아이디를 입력하세요" required>
+          </div>
+          <div class="input-container">
+            <i class="fa-solid fa-lock"></i>
+            <input class="login-input" type="password" placeholder="비밀번호를 입력하세요" required>
+          </div>
+          <div class="auto-login">
+            <input type="checkbox" name="" id="">
+            <span>자동로그인</span>
+          </div>
+          <input class="login-btn" type="submit" value="로그인">
+          <div class="login-under">
+            <span>아이디 찾기</span>&nbsp; | &nbsp;
+            <span>비밀번호 찾기</span>&nbsp; | &nbsp;
+            <span><a href="./join.html">회원가입</a></span>
+          </div>
+        </form>
+      </div>
+    </div>
+    <div class="under_header">
+      <div class="ud_hd_link">
+        <div class="link-item">
+          <i class="fa-solid fa-globe"></i>
+          <i class="fa-solid fa-caret-down"></i>
+          KR
+        </div>
+        <div class="link-item">
+          <i class="fa-solid fa-truck"></i>
+          배송 정보
+        </div>
+      </div>
+      <div class="search_area">
+        <select>
+          <option>전체</option>
+          <option>제품</option>
+          <option>회사</option>
+        </select>
+        <input type="search" placeholder="검색어를 입력해주세요." id="search-input">
+        <input type="submit" id="search_btn">
+        <label for="search_btn" title="검색">
+          <i class="fa-solid fa-magnifying-glass"></i>
+        </label>
+      </div>
+      <div class="ud_hd_link">
+        <div class="link-item">
+          <a href="https://www.instagram.com/" title="인스타그램" target="_blank" rel="noreferrer noopener">
+            <i class="fa-brands fa-instagram"></i></a>
+        </div>
+        <div class="link-item">
+          <a href="https://www.facebook.com/" title="페이스북" target="_blank" rel="noreferrer noopener">
+            <i class="fa-brands fa-facebook"></i></a>
+          </a>
+        </div>
+        <div class="link-item">
+          <a href="https://www.youtube.com/" title="유튜브" target="_blank" rel="noreferrer noopener">
+            <i class="fa-brands fa-youtube"></i></a>
+        </div>
+        <div class="link-item">
+          <a href="./index.html" title="새탭" target="_blank" rel="noreferrer noopener">
+            <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <div class="sub_container cart">
+    <!-- 서브페이지 제목 -->
+    <div class="sub_title">
+      <div class="sub_title-link">
+        <a href="./index.html"><i class="fa-solid fa-house"></i></a>
+        <i class="fa-solid fa-arrow-right"></i>
+        <i class="fa-solid fa-basket-shopping"></i>
+      </div>
+      <p>장바구니</p>
+    </div>
+    <div class="cart_area">
+      <div class="cart_box">
+        <div class="cart_box1">
+          <div class="cart_item special-box1">상품 정보</div>
+          <div class="cart_item special-box2">수량</div>
+          <div class="cart_item special-box3">할인/적립</div>
+          <div class="cart_item special-box4">합계금액</div>
+        </div>
+        <div class="cart_box2">
+          <div class="cart_item special-item1">
+            <input type="checkbox" checked>
+            <div class="cart-circle">
+              <img src="./images/product/product1.png" alt="제품1">
+            </div>
+          </div>
+          <div class="cart_item special-item2">진피 발효 생강차 (10개입)</div>
+          <div class="cart_item special-item3">1</div>
+          <div class="cart_item special-item4"></div>
+          <div class="cart_item special-item5">10,000원</div>
+        </div>
+        
+        <div class="cart_box3">
+          <div class="box-flex">
+            <p>선색한 제품 금액<br><b>10,000원</b></p>
+            <span class="opResult">+</span>
+            <p>배송비<br><b>0원</b></p>
+            <span class="opResult">-</span>
+            <p>할인<br><b>0원</b></p>
+            <span class="opResult">=</span>
+            <span class="price">총 <b class="cm">10,000원</b></span>
+          </div>
+
+          <button class="cart_btn">
+            <input type="checkbox" id="order" checked>
+            <label for="order" class="order1">1건 주문하기</label>
+            <label for="order" class="order2">주문완료</label>
+          </button>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <div class="tt_top">
+      <div class="ft_item">
+        <div class="tf_text">비전</div>
+        <ul>
+          <li>농생명으로 세상을 구하다.</li>
+          <b>더 알아보기</b>
+        </ul>
+      </div>
+      <div class="ft_item">
+        <div class="tf_text">소셜</div>
+        <ul>
+          <li>
+            <a href="https://www.instagram.com/" target="_blank" rel="noreferrer noopener">
+              instagram
+              <i class="fa-solid fa-arrow-up-right-from-square"></i>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.facebook.com/" target="_blank" rel="noreferrer noopener">
+              facebook
+              <i class="fa-solid fa-arrow-up-right-from-square"></i>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.youtube.com/@gosegu" target="_blank" rel="noreferrer noopener">
+              youtube
+              <i class="fa-solid fa-arrow-up-right-from-square"></i>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="ft_item">
+        <div class="tf_text">기업 정보</div>
+        <ul>
+          <li>전화: 010-6322-1559</li>
+          <li>대표자: 양승진</li>
+          <li>대표 이메일: tmdwls63221559@gmail.com</li>
+          <li><b>사업자정보확인</b></li>
+        </ul>
+      </div>
+    </div>
+    <div class="tf_bottom">
+      <div>© Ginger Health</div>
+      <div class="tf_bottom2">
+        <b>개인정보처리방침</b>
+        <b>이용약관</b>
+        <b>사이트맵</b>
+        <b>브랜드 협력사 및 파트너</b>
+      </div>
+      <div><a href="#" class="top-btn" title="위로 이동">top</a></div>
+    </div>
+  </footer>
+</body>
+
+</html>
